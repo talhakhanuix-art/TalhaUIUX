@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #08080D;
+    --bg-secondary: #11111A;
+    --bg-card: #171722;
+    --accent-primary: #8B5CF6;
+    --accent-secondary: #A78BFA;
+    --accent-highlight: #C4B5FD;
+    --text-main: #F8FAFC;
+    --text-muted: #A1A1B5;
+    --border-subtle: rgba(167, 139, 250, 0.18);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #08080D;
+    color: #F8FAFC;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #08080D;
+}
+::-webkit-scrollbar-thumb {
+  background: #252538;
+  border-radius: 4px;
+  border: 2px solid #08080D;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8B5CF6;
+}
+
+/* Futuristic Ambient Violet Glows */
+.ambient-glow-purple {
+  background: radial-gradient(circle 500px at 50% 30%, rgba(139, 92, 246, 0.15), transparent 70%);
+}
+
+.ambient-glow-subtle {
+  background: radial-gradient(circle 600px at 80% 20%, rgba(99, 102, 241, 0.08), transparent 60%);
+}
+
+.glass-card {
+  background: rgba(23, 23, 34, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(167, 139, 250, 0.15);
+}
+
+.glass-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+/* High-tech grid background pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(167, 139, 250, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(167, 139, 250, 0.04) 1px, transparent 1px);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

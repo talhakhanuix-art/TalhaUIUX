@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08080D"/>
+      <stop offset="50%" stop-color="#11111A"/>
+      <stop offset="100%" stop-color="#171722"/>
+    </linearGradient>
+    <linearGradient id="violetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C4B5FD"/>
+      <stop offset="40%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="cyanAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  <rect width="512" height="512" rx="128" fill="none" stroke="url(#violetGrad)" stroke-width="6" stroke-opacity="0.25"/>
+
+  <!-- Subtle glow aura -->
+  <circle cx="256" cy="256" r="140" fill="#8B5CF6" opacity="0.18" filter="url(#glow)"/>
+
+  <!-- TUX Monogram Geometric Paths -->
+  <g transform="translate(64, 64) scale(0.75)" filter="url(#glow)">
+    <!-- T top bar and stem -->
+    <path d="M120 120 L392 120 M256 120 L256 392" stroke="url(#violetGrad)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- U curve interlocking -->
+    <path d="M160 220 L160 320 C160 380 352 380 352 320 L352 220" stroke="url(#cyanAccent)" stroke-width="26" stroke-linecap="round" fill="none" opacity="0.9"/>
+    
+    <!-- X diagonal accents -->
+    <path d="M330 150 L410 230 M410 150 L330 230" stroke="#C4B5FD" stroke-width="18" stroke-linecap="round"/>
+  </g>
+
+  <!-- Inner core dot -->
+  <circle cx="256" cy="380" r="8" fill="#C4B5FD"/>
+</svg>
